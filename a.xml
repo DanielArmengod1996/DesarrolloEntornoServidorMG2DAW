@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+  <title><![CDATA[Canales]]></title>
+  <language>es-es</language>
+  <ttl>5</ttl>
+  <item>
+	<id>1</id>
+    <title><![CDATA[CANAL A]]></title>
+  </item>
+  <item>
+	<id>2</id>
+    <title><![CDATA[CANAL B]]></title>
+  </item>
+  <item>
+	<id>3</id>
+    <title><![CDATA[CANAL C]]></title>
+  </item>
+  <item>
+	<id>4</id>
+    <title><![CDATA[CANAL D]]></title>
+  </item>
+</channel>
+</rss>

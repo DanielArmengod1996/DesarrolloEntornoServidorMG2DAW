@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script>
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body class = "bg-dark">
+		<div class="card mx-auto" style="margin-top: 15%; width: 1000px;" >
+			<div class="card-header">
+				Registros
+			</div>
+			<div class="card-body">
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">First</th>
+						<th scope="col">Last</th>
+						<th scope="col">Handle</th>
+					</tr>
+				</thead>
+					<tbody>
+					<?php
+					
+					for($x = 0; $x < 10; $x++){
+					
+					?>
+						<tr>
+						  <th scope="row">1</th>
+						  <td>Mark</td>
+						  <td>Otto</td>
+						  <td>@mdo</td>
+						</tr>
+					<?php
+					
+					}
+					
+					?>
+					</tbody>
+			</table>
+			</div>
+		</div>
+
+	</body>
+</html>

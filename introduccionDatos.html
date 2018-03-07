@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script>
+			
+		function nif(dni) {
+			var numero;
+			var letr;
+			var letra;
+			var expresion_regular_dni;
+		 
+			if( dni.length == 9 ){
+				//se recoge los números del dni
+				numero = dni.substr(0,dni.length-1);
+				
+				//se recoge la letra del dni
+				letr = dni.substr(dni.length-1,1);
+				
+				//extraemos el resto del número entre 23, ya que el numero tiene relacion con la letra
+				numero = numero % 23;
+				
+				//sacamos la letra que coincide con el resto del número
+				letra='TRWAGMYFPDXBNJZSQVHLCKET'.substring(numero,numero+1);
+				
+				//comprobamos si corresponde la letra del dni, si no es así, sacamos un error por pantalla
+				if (letra!=letr.toUpperCase()) {
+					alert('Dni erroneo, la letra del NIF no se corresponde');
+					document.getElementById("dni").value = '';
+				}else{
+					alert('Dni correcto');
+				}
+			}else{
+				alert('Dni erroneo, formato no válido');
+				document.getElementById("dni").value = '';
+			}
+		}
+		
+		function validarDni(){
+			var dni = document.getElementById("dni").value;
+			nif(dni);
+		}
+			
+
+		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body class = "bg-dark">
+		<div class="card mx-auto" style="margin-top: 15%; width: 500px;" >
+			<div class="card-header">
+				Registro
+			</div>
+			<div class="card-body">
+				<form method = "POST" action = "register.php">
+					<input class="form-control" placeholder = "nombre" name = "nombre" type = "text"/>										</input></br>
+					<input class="form-control" id = "dni" placeholder = "dni" onchange = "validarDni()" name = "dni" type = "text"/>											</input></br>
+					<input class="form-control" id ="tbEdad" onkeyup = "checkEdad()" placeholder = "edad" name = "edad" type = "number"/>	</input></br>
+					<input class="form-control" placeholder = "Correo electrónico" name = "direccionCorreo" type = "email"/>					</input></br>
+					<input value = "registrar" type = "submit" class="btn btn-primary btn-lg">												</input>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>
